@@ -4,31 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Criador de Nomes</title>
-    <Style>
+    <style>
         body {
             background-color: rgb(138, 189, 138);
-            
         }
         h1 {
             text-align: center;
-            
         }
-
-    </Style>
+    </style>
 </head>
 <body>
     <h1>CRIADOR DE NOMES DE DINOSSAUROS</h1>
-    
-
+    <br>
+    <br>
+    <h3>Informe a primeira sílaba do seu nome:</h3>
+    <input id="n1" type="text">
+    <br>
+    <br>
+    <h3>Informe a última sílaba do seu nome:</h3>
+    <input id="n2" type="text">
+    <br>
+    <br>
+    <h3>Informe a primeira sílaba do seu sobrenome:</h3>
+    <input id="n3" type="text">
+    <br>
+    <br>
+    <h3>Informe a última sílaba do seu sobrenome:</h3>
+    <input id="n4" type="text">
+    <br>
+    <br>
+    <button onclick="Dinossauro()">Veja seu nomesauro</button>
 
     <script>
-        var nome1 = prompt('Informe a primeira sílaba do seu nome:')
-        var ultima1 = prompt('Informe a última sílaba do seu nome:')
-        var nome2 = prompt('Informe a primeira sílaba do seu sobrenome:')
-        var ultima2 = prompt('Informe a última sílaba do seu sobrenome:')
+        function Dinossauro() {
+            var s1 = document.getElementById("n1").value;
+            var s2 = document.getElementById("n2").value;
+            var s3 = document.getElementById("n3").value;
+            var s4 = document.getElementById("n4").value;
 
-        document.write(nome1+ultima2+ultima1+nome2+'sauro')
+           
+            if (s1 && s2 && s3 && s4) {
+                var nomesauro = s1 + s4 + s3 + s2 + 'sauro';
+                alert("Seu nome de dinossauro é: " + nomesauro);
+            } else {
+                alert("Por favor, preencha todas as sílabas para gerar o nome do dinossauro.");
+                
+            }
+        }
     </script>    
-    
 </body>
 </html>
