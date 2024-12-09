@@ -42,10 +42,8 @@
             var s3 = document.getElementById("n3").value;
             var s4 = document.getElementById("n4").value;
 
-            // Verificação se todos os campos foram preenchidos
-            if (s1 && s2 && s3 && s4) {
-                // Pergunta de confirmação
-                var confirmacao = confirm("Deseja continuar e gerar seu nome de dinossauro?");
+                        if (s1 && s2 && s3 && s4) {
+                            var confirmacao = confirm("Deseja continuar e gerar seu nome de dinossauro?");
                 if (confirmacao) {
                     var nomesauro = s1 + s4 + s3 + s2 + 'sauro';
                     alert("Seu nome de dinossauro é: " + nomesauro);
